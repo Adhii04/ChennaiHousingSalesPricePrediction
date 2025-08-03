@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Predictor</h1>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <select id="area" name="area">
+                    <option value="" disabled selected>Select an Area</option>
+                    <option value="Karapakkam">Karapakkam</option>
+                    <option value="Adyar">Adyar</option>
+                    <option value="Chrompet">Chrompet</option>
+                    <option value="Velachery">Velachery</option>
+                    <option value="Anna Nagar">Anna Nagar</option>
+                    <option value="PALLIKARANAI">PALLIKARANAI</option>
+                    <option value="PERUNGUDI">PERUNGUDI</option>
+                    <option value="PADUR">PADUR</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mzzone">MZZONE:</label>
+                <select id="mzzone" name="mzzone">
+                    <option value="" disabled selected>Select MZZONE</option>
+                    <option value="A">A</option>
+                    <option value="C">C</option>
+                    <option value="I">I</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="sale_cond">Sale Condition:</label>
+                <select id="sale_cond" name="sale_cond">
+                    <option value="" disabled selected>Select Sale Condition</option>
+                    <option value="AdjLand">Adjacent Land</option>
+                    <option value="AbNormal">AbNormal</option>
+                    <option value="Family">Family</option>
+                    <option value="Normal Sale">Normal Sale</option>
+                    <option value="Partial">Partial</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="n_bedroom">Number of Bedrooms:</label>
+                <select id="n_bedroom" name="n_bedroom">
+                    <option value="" disabled selected>Select Bedrooms</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="n_bathroom">Number of Bathrooms:</label>
+                <select id="n_bathroom" name="n_bathroom">
+                    <option value="" disabled selected>Select Bathrooms</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Other Features:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="PARK_FACIL" value="Yes"> Parking Facility</label>
+                </div>
+            </div>
+            
+            <button id="predict-button">Predict Price</button>
+        </div>
+
+        <div id="result-container" class="result-container" style="display: none;">
+            <h2>Predicted Price:</h2>
+            <p id="predicted-price"></p>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
